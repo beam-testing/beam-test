@@ -3,7 +3,7 @@ try {
     stage('Build') {
         node {
             checkout scm
-            echo 'hello world'
+            echo 'hello to the world'
             sh 'ls -l'
             stash 'all'
         }
