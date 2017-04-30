@@ -10,14 +10,14 @@ try {
     }
     
     stage('Test') {
-        parallel unitTest {
+        parallel unitTest: {
             node {
                 unstash 'all'
                 echo 'ut'
                 sh 'ls -l'
             }
         },
-        codeStyle {
+        codeStyle: {
             node {
                 unstash 'all'
                 echo 'cs'
